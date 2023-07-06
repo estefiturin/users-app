@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './LoginPage.scss'; 
 import Swal from "sweetalert2";
 
 const initialLoginForm = {
@@ -30,16 +31,16 @@ export const LoginPage = ({ handlerLogin }) => {
         setLoginForm(initialLoginForm);
     }
     return (
-        <div className="modal" style={ {display: 'block'} } tabIndex="-1">
+        <div className="modal" style={{display: 'block'}} tabIndex="-1">
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title">Login Page</h5>
+                        <h5 className="modal-title">Entrar al panel</h5>
                     </div>
                     <form onSubmit={ onSubmit }>
                         <div className="modal-body">
                             <input
-                                className="form-control my-3 w-75"
+                                className="form-control my-2 w-85" 
                                 placeholder="Username"
                                 name="username"
                                 value={username}
@@ -47,7 +48,7 @@ export const LoginPage = ({ handlerLogin }) => {
                             />
                             
                             <input
-                                className="form-control my-3 w-75"
+                                className="form-control  my-2     w-85"
                                 placeholder="Password"
                                 type="password"
                                 name="password"
